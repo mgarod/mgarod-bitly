@@ -7,14 +7,19 @@ from flask import Flask, jsonify, abort, make_response
 
 
 parser = argparse.ArgumentParser(description='Extension to Bitly API')
-parser.add_argument('--OAuth', 
-                    required=True,
-                    help="Bitly provided OAuth Token",
-                    default=os.environ.get('BITLY_OAUTH'))
-
+parser.add_argument('--client-id', 
+                    help="Bitly provided client_id",
+                    default=os.environ.get('CLIENT_ID'))
+parser.add_argument('--client-secret',
+                    help="Bitly provided client_secret",
+                    default=os.environ.get('CLIENT_SECRET'))
+parser.add_argument('-d', '--debug',
+                    action='store_true',
+                    help='Start Flask in debug mode',
+                    default=False)
+                    
 app = Flask(__name__)
 args = parser.parse_args()
-
 
 @app.route('/')
 def index():
@@ -40,4 +45,4 @@ def not_found(error):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=args.debug)

@@ -1,3 +1,15 @@
+## Installation
+This project requires python3
+```
+git clone https://github.com/mgarod/mgarod-bitly.git
+cd mgarod-bitly
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+
+
 ### Assumptions
 https://dev.bitly.com/v4/#operation/getMetricsForBitlinkByCountries
 - Given that I only have access to my own bitlinks, I have no data with a timestamp other than 9/30. Therefore, I am assuming that by passing in `?units=30&unit=day&size=30` (or some combination therein) to this endpoint, this query is capable of returning to me the last 30 days worth of metrics.

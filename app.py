@@ -75,7 +75,7 @@ Task: The average user clicks per country over the last 30 days for a user's def
 2) Get all bitlinks in guid
 3) For every bitlink in guid
     3.1) add to a defaultdict clicks_by_country where keys are Country and values are clicks
-4) Reduce the clicks_by_country by dividing each value by 30
+4) Divide each country's value by 30 to produce the average
 
 curl -H "Authorization: Bearer <token>" http://localhost:5000/v4/user/average
 '''

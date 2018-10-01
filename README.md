@@ -2,7 +2,7 @@
 This Python3 Flask server exposes 3 existing Bitly API endpoints as well as creating a new one for the backend challenge.
 
 ## Installation
-This project requires python3
+This project requires Python 3.7.0 or later, with the module `venv` installed.
 ```
 git clone https://github.com/mgarod/mgarod-bitly.git
 cd mgarod-bitly

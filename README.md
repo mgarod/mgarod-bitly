@@ -1,3 +1,6 @@
+# Bitly Backend Challenge
+This Python3 Flask server exposes 3 existing Bitly API endpoints as well as creating a new one for the backend challenge.
+
 ## Installation
 This project requires python3
 ```
@@ -20,7 +23,7 @@ optional arguments:
   -h, --help   show this help message and exit
   -d, --debug  Start Flask in debug mode
 ```
-Once launched, the server is accessible by `http://localhost:5000`
+Once launched, functionality can be checked by accessing `http://localhost:5000`. An information page should be visible.
 
 ## Endpoints
 This API repackages several existing `https://api-ssl.bitly.com/v4/` endpoints in order to create the new endpoint `/user/average`.
@@ -46,3 +49,6 @@ Pagination
 
 ### Testing
 Without proper data to explore, testing has been omitted. Because of this, the challenge enpoint is not guaranteed to function on any user with more than 50 bitlinks (due to lack of pagination processing), and any user that has clicks from more than 1 country.
+
+### Dependencies
+See `requirements.txt` for details
